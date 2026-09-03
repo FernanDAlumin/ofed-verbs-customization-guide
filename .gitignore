@@ -1,0 +1,37 @@
+# SPDX-License-Identifier: Apache-2.0
+
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+~$*
+.~lock.*
+*.swp
+*.swo
+*~
+
+# This repository distributes source documentation only.
+build/
+out/
+*.o
+*.so
+*.a
+*.deb
+*.rpm
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.pcap
+*.pcapng
+core
+core.*
+*.pem
+*.key
+
+# Local inspection artifacts must never be committed.
+*.log
+*.trace
+compile_commands.json
