@@ -2,6 +2,8 @@
 
 # 2. Design a context-scoped ops overlay
 
+[简体中文](zh-CN/02-design-an-ops-overlay.md)
+
 The upstream composition mechanism is simple; the design contract around it is
 not. Start by specifying behavior and object ownership, then write the sparse
 overlay.

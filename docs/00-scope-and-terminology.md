@@ -2,6 +2,8 @@
 
 # 0. Scope and terminology
 
+[简体中文](zh-CN/00-scope-and-terminology.md)
+
 This chapter defines exactly what is being customized. That distinction keeps a
 small userspace experiment from being described as a new verb, a kernel driver,
 or a portable libibverbs extension when it is none of those things.

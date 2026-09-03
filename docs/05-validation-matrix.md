@@ -2,6 +2,8 @@
 
 # 5. Validate behavior and compatibility
 
+[简体中文](zh-CN/05-validation-matrix.md)
+
 A custom callback is not validated when it prints a message. Validation must
 show that the intended callback ran, native-off behavior stayed unchanged,
 object families remained type-safe, and unsupported paths failed as designed.
@@ -168,7 +170,7 @@ Exercise at least:
 - simultaneous context creation with different modes;
 - concurrent post/poll on supported objects;
 - if concurrent destroy is explicitly supported, controlled
-  create/destroy/post/destroy races under the delayed-lifetime design;
+  create/post/poll/destroy interleavings under the delayed-lifetime design;
 - otherwise, tests that enforce the documented caller-synchronization boundary
   without issuing a public verb on a freed handle;
 - backend queue full and bounded backpressure;

@@ -2,6 +2,8 @@
 
 # 3. Close object families and lifecycles
 
+[简体中文](zh-CN/03-close-object-lifecycles.md)
+
 Replacing one callback is easy. Proving that every object reaching that callback
 has the expected concrete representation is the central safety problem.
 

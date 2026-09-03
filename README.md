@@ -5,7 +5,6 @@
 ## A provider-side design guide
 
 [简体中文](README.zh-CN.md) · [Tutorial](docs/00-scope-and-terminology.md) ·
-[Design checklist](docs/DESIGN_REVIEW_CHECKLIST.md) ·
 [References](docs/REFERENCES.md)
 
 This tutorial explains how a libibverbs call reaches a userspace provider and
@@ -123,13 +122,6 @@ provider build.
 5. [Build, load, and roll back safely](docs/04-build-load-and-rollback.md)
 6. [Validate behavior and compatibility](docs/05-validation-matrix.md)
 7. [Handle versions and vendor forks](docs/06-versioning-and-portability.md)
-8. [Respect licensing and provenance](docs/07-licensing-and-provenance.md)
-9. [Run the final design review](docs/DESIGN_REVIEW_CHECKLIST.md)
-
-Reusable worksheets:
-
-- [Operation-closure matrix](docs/OPERATION_CLOSURE_TEMPLATE.md)
-- [Version record](docs/VERSION_RECORD_TEMPLATE.md)
 
 ## The most important invariant
 

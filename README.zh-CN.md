@@ -4,11 +4,10 @@
 
 ## Userspace provider 侧设计教程
 
-[English](README.md) · [教程目录](docs/00-scope-and-terminology.md) ·
-[设计审查清单](docs/DESIGN_REVIEW_CHECKLIST.md) ·
+[English](README.md) · [中文教程](docs/zh-CN/00-scope-and-terminology.md) ·
 [公开资料索引](docs/REFERENCES.md)
 
-英文教程是规范版本；本页提供中文定位、边界和阅读入口。
+英文教程是规范版本；`docs/zh-CN/` 提供逐章完整中文版，本页是中文总入口。
 
 本教程解释一个 `libibverbs` 调用如何到达 userspace provider，以及如何在
 已有 OFED/rdma-core provider 中，为单个 context 安装一层自定义操作回调。
@@ -24,8 +23,8 @@
 原生回退、ABI 版本和回滚路径始终一致。
 
 教程区分三种设计：只包装并委托原生对象的 callback、在 strict context 中使用
-自定义对象表示的完整对象族，以及允许原生/自定义对象共存的 registry mixed
-模式。三者的安全条件不同，不能混为一谈。
+自定义对象表示的完整对象族，以及允许原生/自定义对象共存的注册表混合模式。三者的
+安全条件不同，不能混为一谈。
 
 ## 项目边界
 
@@ -75,20 +74,13 @@ ops interposition 适用于你明确维护并验证自定义 provider 构建的�
 
 ## 学习路径
 
-1. [范围与术语](docs/00-scope-and-terminology.md)
-2. [追踪 verbs dispatch 路径](docs/01-trace-the-dispatch-path.md)
-3. [设计 context 级 ops overlay](docs/02-design-an-ops-overlay.md)
-4. [闭合对象族与生命周期](docs/03-close-object-lifecycles.md)
-5. [安全构建、加载与回滚](docs/04-build-load-and-rollback.md)
-6. [验证行为和兼容性](docs/05-validation-matrix.md)
-7. [处理版本和 vendor fork](docs/06-versioning-and-portability.md)
-8. [许可证与来源边界](docs/07-licensing-and-provenance.md)
-9. [最终设计审查](docs/DESIGN_REVIEW_CHECKLIST.md)
-
-可复用模板：
-
-- [操作闭包矩阵](docs/OPERATION_CLOSURE_TEMPLATE.md)
-- [版本记录](docs/VERSION_RECORD_TEMPLATE.md)
+1. [范围与术语](docs/zh-CN/00-scope-and-terminology.md)
+2. [追踪 verbs dispatch 路径](docs/zh-CN/01-trace-the-dispatch-path.md)
+3. [设计 context 级 ops overlay](docs/zh-CN/02-design-an-ops-overlay.md)
+4. [对象族闭包与生命周期](docs/zh-CN/03-close-object-lifecycles.md)
+5. [安全构建、加载与回滚](docs/zh-CN/04-build-load-and-rollback.md)
+6. [验证行为和兼容性](docs/zh-CN/05-validation-matrix.md)
+7. [处理版本和 vendor fork](docs/zh-CN/06-versioning-and-portability.md)
 
 ## 最重要的不变量
 
@@ -97,7 +89,7 @@ ops interposition 适用于你明确维护并验证自定义 provider 构建的�
 
 绝不能先对来源未知的 public handle 做 `container_of`，再读取 wrapper 尾部的
 tag 判断它是不是自定义对象。如果它由原生路径创建，这次读取本身就已经越界。
-正确做法是：创建阶段强制对象族闭包，或者在 downcast 之前查询线程安全 registry。
+正确做法是：创建阶段强制对象族闭包，或者在 downcast 之前查询线程安全注册表。
 
 ## 安全实验原则
 

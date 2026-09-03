@@ -2,6 +2,8 @@
 
 # 4. Build, load, and roll back safely
 
+[简体中文](zh-CN/04-build-load-and-rollback.md)
+
 Provider experiments can make every RDMA application on a host fail if the
 system library is replaced incorrectly. The tutorial therefore uses an
 in-place, side-by-side build and never installs over `/usr`.

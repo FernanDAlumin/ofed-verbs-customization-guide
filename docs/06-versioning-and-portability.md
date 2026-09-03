@@ -2,6 +2,8 @@
 
 # 6. Handle versions and vendor forks
 
+[简体中文](zh-CN/06-versioning-and-portability.md)
+
 Provider interposition lives on a private boundary. Version management is part
 of the design, not release paperwork added after the code works.
 
@@ -147,4 +149,5 @@ Avoid:
 Portability is an evidence-backed matrix, not a property inherited from the
 public verbs API.
 
-Next: [Respect licensing and provenance](07-licensing-and-provenance.md).
+Continue with the [public reference map](REFERENCES.md), or return to the
+[project overview](../README.md).
